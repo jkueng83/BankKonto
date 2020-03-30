@@ -24,7 +24,7 @@ public class Main {
         BankCustomer bankCustomer = new BankCustomer("Johannes" ,"3.9.1983");
 
         CreditAccount creditAccount = new CreditAccount(2,1,-200000);
-        LaendleGiroAccount laendleGiroAccount = new LaendleGiroAccount(8,0.5,5000);
+        LaendleGiroAccount laendleGiroAccount = new LaendleGiroAccount(8,0.5,-5000);
         SavingBook savingBook =new SavingBook(4,2);
 
         bankCustomer.addAccount(creditAccount);
@@ -42,6 +42,15 @@ public class Main {
 
         System.out.println(bankCustomer.getName());
         System.out.println(bankCustomer.getBirthday());
+
+        BankWorker bw1 = new BankWorker("Hans" , "2.2.1972","Private Customer Support");
+        BankWorker bw2=new BankWorker("Franz" , "8.8.1965", "Chef");
+        bankCustomer.addBankWorker(bw1);
+        bankCustomer.addBankWorker(bw2);
+
+
+
+        bankCustomer.printBankCustomerDetails();
     }
 
 

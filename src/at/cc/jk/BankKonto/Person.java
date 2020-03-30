@@ -24,4 +24,9 @@ public class Person {
     public void setBirthday(String birthday) {
         this.birthday = birthday;
     }
+
+    public void printPersonDetails() {
+        System.out.println("Name:\t\t\t\t" + this.name);
+        System.out.println("Birthday:\t\t\t" + this.birthday);
+    }
 }
